@@ -1,0 +1,15 @@
+{
+  "name": "sass-element-tag",
+  "description": "Sass Element Tag",
+  "version": "1.0.0",
+  "author": "S. Francis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tachyon1337/sass-element-tag.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "sassdoc": "^2.1.15"
+  }
+}

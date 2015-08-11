@@ -1,0 +1,27 @@
+
+
+/// @access public
+/// @param {String} $tag - element tag
+/// @param {List} $tags - element alt tags
+/// @param {String} $class - class scope
+/// @content css
+/// @example
+///   element-tag($tag:my-element) { @include my-element-mixin() }
+@mixin element-tag($tag:null,$tags:null,$class:null){
+  $component-tags:null;
+  @if $tag !=null{
+    $component-tags:$tag;
+  }
+  @if $tags != null {
+    $component-tags: append($component-tags,$tags, comma);
+  }
+  #{$component-tags}{
+    @if $class != null{
+      &.#{$class} {
+        @content;
+      }
+    }@else{
+      @content;
+    }
+  }
+}
